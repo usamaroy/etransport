@@ -1,23 +1,23 @@
 <!-- js -->
-	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/theme/js/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/theme/js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
 	<!-- //js -->
 
 
 <!-- stats -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.countup.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/js/jquery.waypoints.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/js/jquery.countup.js"></script>
 	<script>
 		$('.counter').countUp();
 	</script>
 	<!-- //stats -->
 <!-- bars.js -->   
-	<script src="js/bars.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/js/bars.js"></script>
 	<!-- //bars.js -->
 
 	<!-- flexSlider (for testimonials) -->
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
-	<script defer src="js/jquery.flexslider.js"></script>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/theme/css/flexslider.css" type="text/css" media="screen" property="" />
+	<script defer src="<?php echo base_url(); ?>assets/theme/js/jquery.flexslider.js"></script>
 	<script>
 		$(window).load(function () {
 			$('.flexslider').flexslider({
@@ -30,13 +30,13 @@
 	</script>
 	<!-- //flexSlider (for testimonials) -->
 	<!-- simpleLightbox -->
-	<script src="js/simpleLightbox.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/js/simpleLightbox.js"></script>
 	<script>
 		$('.proj_gallery_grid a').simpleLightbox();
 	</script>
 	<!-- //simpleLightbox -->
 <!--popup-js-->
-<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/theme/js/jquery.magnific-popup.js" type="text/javascript"></script>
  <script>
 						$(document).ready(function() {
 						$('.popup-with-zoom-anim').magnificPopup({
@@ -55,8 +55,8 @@
 </script>
 <!--//popup-js-->
 <!-- start-smooth-scrolling -->
-	<script src="js/move-top.js"></script>
-	<script src="js/easing.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/js/move-top.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/js/easing.js"></script>
 	<script>
 		jQuery(document).ready(function ($) {
 			$(".scroll").click(function (event) {
@@ -92,7 +92,7 @@
 	
 	
 	<!-- smooth scrolling js -->
-	<script src="js/SmoothScroll.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/theme/js/SmoothScroll.min.js"></script>
 	<!-- //smooth scrolling js -->
  </body>
 </html>
