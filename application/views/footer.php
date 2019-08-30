@@ -1,6 +1,7 @@
+
 <!-- js -->
-	<script type="text/javascript" src="<?php echo base_url(); ?>assets/theme/js/jquery-2.2.3.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url(); ?>assets/theme/js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
+<script type="text/javascript" src="j<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
 	<!-- //js -->
 
 
@@ -16,7 +17,7 @@
 	<!-- //bars.js -->
 
 	<!-- flexSlider (for testimonials) -->
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/theme/css/flexslider.css" type="text/css" media="screen" property="" />
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/theme/<?php echo base_url(); ?>assets/theme/css/flexslider.css" type="text/css" media="screen" property="" />
 	<script defer src="<?php echo base_url(); ?>assets/theme/js/jquery.flexslider.js"></script>
 	<script>
 		$(window).load(function () {

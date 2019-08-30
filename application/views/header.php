@@ -23,27 +23,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			window.scrollTo(0, 1);
 		}
 	</script>
-	<link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/theme/css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
 	<link href="<?php echo base_url(); ?>assets/theme/css/style.css" rel='stylesheet' type='text/css' />
 	<link href="<?php echo base_url(); ?>assets/theme/css/simpleLightbox.css" rel='stylesheet' type='text/css' />
 	<link href="<?php echo base_url(); ?>assets/theme/css/popup-box.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="<?php echo base_url(); ?>assets/theme/css/fontawesome-all.css" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="/fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 </head>
 
 <body>
 <header>
 	<div class="header">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
- <a class="navbar-brand" href="index.html">Transl<span><i class="fab fa-empire"></i></span>ad</a>
+ <a class="navbar-brand" href="<?php echo base_url(); ?>assets/theme/index.html">Transl<span><i class="fab fa-empire"></i></span>ad</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="\index.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link scroll" href="#about">About</a>
