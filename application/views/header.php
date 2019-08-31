@@ -1,70 +1,48 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
+<!-- CSS -->
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Transload a Corporate Category Bootstrap responsive WebTemplate | Home :: w3layouts</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<meta name="keywords" content="Transload a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/w3.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <!-- JS -->
+    <script src="<?php echo base_url(); ?>assets/js/popper.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+    <style>
+    div,h1,h2,h3,h4,h5,h6,p{font-family: "Karma", sans-serif}
+    </style>
+  </head>
+  <body>
+    
+   
 
-	<script type="application/x-javascript">
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
 
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/theme/css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
-	<link href="<?php echo base_url(); ?>assets/theme/css/style.css" rel='stylesheet' type='text/css' />
-	<link href="<?php echo base_url(); ?>assets/theme/css/simpleLightbox.css" rel='stylesheet' type='text/css' />
-	<link href="<?php echo base_url(); ?>assets/theme/css/popup-box.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="<?php echo base_url(); ?>assets/theme/css/fontawesome-all.css" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-	<link href="/fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-</head>
+    <!-- Second Logo -->
+    <div class="w3-bar w3-white  w3-padding">
+      <i><img src="http://localhost/k2_project/assets/image/logo1.png" style="margin-left: 40px;" height="50px" alt="Italian Trulli"></i>
+      <i class="fa fa-instagram fa-2x w3-right w3-hover-opacity"></i>
+      <i class="fa fa-twitter fa-2x w3-right w3-hover-opacity"></i>
+      <i class="fa fa-linkedin fa-2x w3-right w3-hover-opacity"></i>
+    </div>
 
-<body>
-<header>
-	<div class="header">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
- <a class="navbar-brand" href="<?php echo base_url(); ?>assets/theme/index.html">Transl<span><i class="fab fa-empire"></i></span>ad</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="\index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link scroll" href="#about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link scroll" href="#services">Services</a>
-      </li>
-	   <li class="nav-item">
-        <a class="nav-link scroll" href="#works">Our Works</a>
-      </li>
-	   <li class="nav-item">
-        <a class="nav-link scroll" href="#pricing">Pricing</a>
-      </li>
-	  <li class="nav-item">
-        <a class="nav-link scroll" href="#contact">Contact</a>
-      </li>
-    </ul>
-    <div class="navbar-text">
-     <p class="right-p"><i class="fas fa-phone" aria-hidden="true"></i>098-765-4321</p>
+    
+   
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="http://localhost/k2_project/index.php"  class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+      <a href="http://localhost/k2_project/html/web/sales.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Sales</a>
+      <a href="http://localhost/k2_project/index.php"  class="w3-bar-item w3-button" onclick="toggleFunction()">About Us</a>
+      <a href="http://localhost/k2_project/html/web/contactus.php"  class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
+      <a href="http://localhost/k2_project/html/web/lettings.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Lettings</a>
+      <a href="http://localhost/k2_project/html/web/property_managment.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Property Managment</a>
+      
     </div>
   </div>
-</nav>
-		</div>
-</header>

@@ -1,99 +1,86 @@
-
-<!-- js -->
-<script type="text/javascript" src="j<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
-	<!-- //js -->
-
-
-<!-- stats -->
-	<script src="<?php echo base_url(); ?>assets/theme/js/jquery.waypoints.min.js"></script>
-	<script src="<?php echo base_url(); ?>assets/theme/js/jquery.countup.js"></script>
-	<script>
-		$('.counter').countUp();
-	</script>
-	<!-- //stats -->
-<!-- bars.js -->   
-	<script src="<?php echo base_url(); ?>assets/theme/js/bars.js"></script>
-	<!-- //bars.js -->
-
-	<!-- flexSlider (for testimonials) -->
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/theme/<?php echo base_url(); ?>assets/theme/css/flexslider.css" type="text/css" media="screen" property="" />
-	<script defer src="<?php echo base_url(); ?>assets/theme/js/jquery.flexslider.js"></script>
-	<script>
-		$(window).load(function () {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				start: function (slider) {
-					$('body').removeClass('loading');
-				}
-			});
-		});
-	</script>
-	<!-- //flexSlider (for testimonials) -->
-	<!-- simpleLightbox -->
-	<script src="<?php echo base_url(); ?>assets/theme/js/simpleLightbox.js"></script>
-	<script>
-		$('.proj_gallery_grid a').simpleLightbox();
-	</script>
-	<!-- //simpleLightbox -->
-<!--popup-js-->
-<script src="<?php echo base_url(); ?>assets/theme/js/jquery.magnific-popup.js" type="text/javascript"></script>
- <script>
-						$(document).ready(function() {
-						$('.popup-with-zoom-anim').magnificPopup({
-							type: 'inline',
-							fixedContentPos: false,
-							fixedBgPos: true,
-							overflowY: 'auto',
-							closeBtnInside: true,
-							preloader: false,
-							midClick: true,
-							removalDelay: 300,
-							mainClass: 'my-mfp-zoom-in'
-						});
-																						
-						});
+<!-- Footer -->
+<hr style="height:3px;border:none;color:#333;background-color:#333;">
+<footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+	<div class="">
+		<div class="w3-row">
+			<div class="w3-col m1  w3-center">
+				<h5>Home</h5>
+				
+			</div>
+			<div class="w3-col m2 w3-center">
+				<h5>Services</h5>
+				<p><a href="#">Services</a></p>
+				<p><a href="#">Sales</a></p>
+				<p><a href="#">Management</a></p>
+				<p><a href="#">Find store</a></p>
+				
+				<p><a href="#">Help</a></p>
+			</div>
+			<div class="w3-col m1  w3-center">
+				<h5>Properties</h5>
+				
+				<p><a href="#">For Sales</a></p>
+				<p><a href="#">To lits</a></p>
+				
+			</div>
+			<div class="w3-col m1  w3-center">
+				
+				<h5>About Us</h5>
+				<p><a href="#">Our Teams</a></p>
+				<p><a href="#">Our Projecct</a></p>
+			</div>
+			<div class="w3-col m2 w3-center">
+				<h5>Contact Us</h5>
+				<p><a href="#">Contact</a></p>
+				<p><a href="#">Location</a></p>
+			</div>
+			<div class="w3-col m4  w3-center">
+				<p style="font-size: 22px"><b class="w3-wide">Ennismore Estates </b>
+				412 Edgware Road London W2 1ED </p>
+				<p class="w3-wide" style="font-size: 20px"> Telephone:  0203 456 7893  </p>
+				<p class="w3-wide" style="font-size: 20px"> email: info@ennismoreestates.com
+</p>
+			</div>
+			
+		</div>
+		<div class="w3-row">
+			
+		</div>
+		
+	</div>
+	
+	<div class="col-sm-4">
+		
+	</div>
+	
+</footer>
+<script>
+	// Modal Image Gallery
+function onClick(element) {
+document.getElementById("img01").src = element.src;
+document.getElementById("modal01").style.display = "block";
+var captionText = document.getElementById("caption");
+captionText.innerHTML = element.alt;
+}
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+var navbar = document.getElementById("myNavbar");
+if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+} else {
+navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+}
+}
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+var x = document.getElementById("navDemo");
+if (x.className.indexOf("w3-show") == -1) {
+x.className += " w3-show";
+} else {
+x.className = x.className.replace(" w3-show", "");
+}
+}
 </script>
-<!--//popup-js-->
-<!-- start-smooth-scrolling -->
-	<script src="<?php echo base_url(); ?>assets/theme/js/move-top.js"></script>
-	<script src="<?php echo base_url(); ?>assets/theme/js/easing.js"></script>
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
-	<!-- //end-smooth-scrolling -->
-	
-	<!-- smooth-scrolling-of-move-up -->
-	<script>
-		$(document).ready(function () {
-			/*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			*/
-
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
-
-		});
-	</script>
-	<!-- //smooth-scrolling-of-move-up -->
-	
-	
-	<!-- smooth scrolling js -->
-	<script src="<?php echo base_url(); ?>assets/theme/js/SmoothScroll.min.js"></script>
-	<!-- //smooth scrolling js -->
- </body>
+</body>
 </html>
