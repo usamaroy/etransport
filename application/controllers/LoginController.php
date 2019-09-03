@@ -1,7 +1,8 @@
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class CargoController extends CI_Controller {
+class LoginController extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,7 +21,13 @@ class CargoController extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('cargo/index_cargo');
+		$newdata = array(
+        'username'  => 'johndoe',
+        'email'     => 'johndoe@some-site.com',
+        'logged_in' => TRUE
+);
+
+$this->session->set_userdata('login',23);
 		
 	}
 }

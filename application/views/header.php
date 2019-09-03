@@ -23,18 +23,42 @@
   <body>
     
    
+<?php   $id=$this->session->userdata('login'); 
+      
+            if($id){
+              echo "login";
+            }else{
+              echo "fail";
+            }
+          ?>
+ <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar  w3-card w3-text-white" style="background-color: rgb(64, 47, 35);">
+         <a href="#pricing" class="w3-bar-item w3-right w3-wide w3-button"><i class="fa fa-sign-in"></i> Login</a>
+      <a href="#contact" class="w3-bar-item w3-right w3-wide w3-button"><i class="fa fa-user-circle-o"></i> Register</a>
+    </div>
 
 
     <!-- Second Logo -->
     <div class="w3-bar w3-white  w3-padding">
       <i><img src="http://localhost/k2_project/assets/image/logo1.png" style="margin-left: 40px;" height="50px" alt="Italian Trulli"></i>
-      <i class="fa fa-instagram fa-2x w3-right w3-hover-opacity"></i>
-      <i class="fa fa-twitter fa-2x w3-right w3-hover-opacity"></i>
-      <i class="fa fa-linkedin fa-2x w3-right w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-text-red fa-2x w3-right w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-text-blue fa-2x w3-right w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-text-teal fa-2x w3-right w3-hover-opacity"></i>
     </div>
 
     
-   
+      <!-- Third Bar -->
+    <div class="w3-bar w3-white" id="myNavbar">
+      <i><img src="http://localhost/k2_project/assets/image/logo2.png" height="40px" style="margin-left: 40px;" alt="Italian Trulli"></i>
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="toggleFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="http://localhost/k2_project/html/web/contactus.php" class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-small w3-padding-large">Contact</a>
+      <a href="#band" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-medium w3-hide-small">About US</a>
+      <a href="http://localhost/k2_project/html/web/lettings.php" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-small">Lettings</a>
+      <a href="http://localhost/k2_project/html/web/sales.php" class="w3-bar-item  w3-button w3-right w3-padding-large w3-hide-small">Sales</a>
+      <a href="http://localhost/k2_project/html/web/property_managment.php" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-small">Property Managment</a>
+      <a href="http://localhost/k2_project/index.php"  class="w3-bar-item  w3-button w3-right w3-padding-large w3-hide-small">Home</a>
+      </div>
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
       <a href="http://localhost/k2_project/index.php"  class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>

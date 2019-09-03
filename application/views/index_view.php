@@ -27,7 +27,7 @@ background-size: cover;
       
       <div class="w3-center" style="padding-top:250px!important;padding-bottom:250px!important">
         
-        <button class="w3-button  w3-border w3-black w3-opacity w3-jumbo"> CARGO</button>
+        <a href="<?php echo base_url("cargo/CargoController/index")?>" class="w3-button  w3-border w3-black w3-opacity w3-jumbo"> CARGO</a>
       </div>
       
     </div>
