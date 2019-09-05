@@ -28,6 +28,10 @@ class LoginController extends CI_Controller {
 );
 
 $this->session->set_userdata('login',23);
+
+$this->load->view('login_view');
 		
 	}
+
+	
 }
