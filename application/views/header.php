@@ -35,7 +35,7 @@
  <!-- Navbar (sit on top) -->
     <div class="w3-top">
       <div class="w3-bar  w3-card w3-text-white" style="background-color: rgb(64, 47, 35);">
-         <a href="#pricing" class="w3-bar-item w3-right w3-wide w3-button"><i class="fa fa-sign-in"></i> Login</a>
+         <a href="<?php echo base_url()?>LoginController/index" class="w3-bar-item w3-right w3-wide w3-button"><i class="fa fa-sign-in"></i> Login</a>
       <a href="<?php echo base_url()?>SignupController/index" class="w3-bar-item w3-right w3-wide w3-button"><i class="fa fa-user-circle-o"></i> Register</a>
     </div>
 
