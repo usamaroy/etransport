@@ -11,6 +11,7 @@ min-height: 100%;
 background-position: center;
 background-size: cover;
 }
+
 </style>
 <?php include_once "header.php"?>
 <div class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px;">
