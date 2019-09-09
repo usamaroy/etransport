@@ -38,7 +38,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		Communal Login Form</h1>
 	<div class="appointment-w3">
 
-		<form action="#" method="post">
+		<?php echo form_open('LoginController/admin_login')?>
 			<h2 class="sub-heading-wthree"> Login Here</h2>
 			<div class="main">
 				<div class="form-left-w3l">
@@ -75,7 +75,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 
 
-		</form>
+		<?php echo form_close();?>
 	</div>
 
 	<div class="copy">

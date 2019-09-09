@@ -21,6 +21,7 @@ class LoginController extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->helper('form');
 		$newdata = array(
         'username'  => 'johndoe',
         'email'     => 'johndoe@some-site.com',
@@ -31,6 +32,12 @@ $this->session->set_userdata('login',23);
 
 $this->load->view('login_view');
 		
+	}
+
+	public function admin_login(){
+		
+	echo $email = $this->input->post('email');
+	echo  $password = $this->input->post('password');
 	}
 
 	
