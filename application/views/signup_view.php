@@ -44,7 +44,7 @@
             </div>
             <div class="txt-left-side">
                 <h2> Sign Up Here </h2>
-                <form action="#" method="post">
+                <?php echo form_open('signupController/signup')?>
                     <div class="form-left-to-w3l">
                         <span class="fa fa-user-o" aria-hidden="true"></span>
                         <input type="text" name="Name" placeholder=" Name" required="">
@@ -58,6 +58,12 @@
                         <div class="clear"></div>
                     </div>
                     <div class="form-left-to-w3l">
+                        <span class="fa fa-phone" aria-hidden="true"></span>
+                        <input type="text" name="CNIC" placeholder="CNIC" required="">
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="form-left-to-w3l">
                         <span class="fa fa-envelope-o" aria-hidden="true"></span>
                         <input type="email" name="email" placeholder="Email" required="">
 
@@ -67,6 +73,31 @@
 
                         <span class="fa fa-lock" aria-hidden="true"></span>
                         <input type="password" name="password" placeholder="Password" required="">
+                        <div class="clear"></div>
+                    </div>
+                    <div class="form-left-to-w3l">
+                        <span class="fa fa-phone" aria-hidden="true"></span>
+                        <input type="text" name="city" placeholder="city" required="">
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="form-left-to-w3l">
+                        <span class="fa fa-phone" aria-hidden="true"></span>
+                        <input type="text" name="Provinces" placeholder="Provinces" required="">
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="form-left-to-w3l">
+                        <span class="fa fa-phone" aria-hidden="true"></span>
+                        
+                        <textarea name="Address" placeholder="Address" required=""  rows="3"></textarea>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="form-left-to-w3l">
+                        <span class="fa fa-phone" aria-hidden="true"></span>
+                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Male
+                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">FeMale
+
                         <div class="clear"></div>
                     </div>
                     <div class="main-two-w3ls">
