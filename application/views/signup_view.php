@@ -31,48 +31,47 @@
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 </head>
 <body>
-    <h1 class="error">Gadget Sign Up Form</h1>
+    <h1 class="error"> Sign Up Form</h1>
 	<!---728x90--->
     <div class="w3layouts-two-grids">
 	<!---728x90--->
         <div class="mid-class">
             <div class="img-right-side">
-                <h3>Manage Your Gadgets Account</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget Lorem ipsum dolor sit
-                    amet, consectetuer adipiscing elit. Aenean commodo ligula ege</p>
-                <img src="<?php echo base_url()?>assets/img/b11.png" class="img-fluid" alt="">
+                <h3></h3>
+               
+                <img src="<?php echo base_url()?>assets/img/ee.png" class="img-fluid" alt="">
             </div>
             <div class="txt-left-side">
                 <h2> Sign Up Here </h2>
                 <?php echo form_open('signupController/signup')?>
                     <div class="form-left-to-w3l">
                         <span class="fa fa-user-o" aria-hidden="true"></span>
-                        <input type="text" name="Name" placeholder=" Name" required="">
+                        <input type="text" name="name" placeholder=" name" required="">
 
                         <div class="clear"></div>
                     </div>
                     <div class="form-left-to-w3l">
                         <span class="fa fa-phone" aria-hidden="true"></span>
-                        <input type="text" name="Phone" placeholder="Phone" required="">
+                        <input type="text" name="phone" placeholder="phone" required="">
 
                         <div class="clear"></div>
                     </div>
                     <div class="form-left-to-w3l">
                         <span class="fa fa-phone" aria-hidden="true"></span>
-                        <input type="text" name="CNIC" placeholder="CNIC" required="">
+                        <input type="text" name="cnic" placeholder="cnic" required="">
 
                         <div class="clear"></div>
                     </div>
                     <div class="form-left-to-w3l">
                         <span class="fa fa-envelope-o" aria-hidden="true"></span>
-                        <input type="email" name="email" placeholder="Email" required="">
+                        <input type="email" name="email" placeholder="email" required="">
 
                         <div class="clear"></div>
                     </div>
                     <div class="form-left-to-w3l ">
 
                         <span class="fa fa-lock" aria-hidden="true"></span>
-                        <input type="password" name="password" placeholder="Password" required="">
+                        <input type="password" name="password" placeholder="password" required="">
                         <div class="clear"></div>
                     </div>
                     <div class="form-left-to-w3l">
@@ -83,20 +82,20 @@
                     </div>
                     <div class="form-left-to-w3l">
                         <span class="fa fa-phone" aria-hidden="true"></span>
-                        <input type="text" name="Provinces" placeholder="Provinces" required="">
+                        <input type="text" name="provinces" placeholder="provinces" required="">
 
                         <div class="clear"></div>
                     </div>
                     <div class="form-left-to-w3l">
                         <span class="fa fa-phone" aria-hidden="true"></span>
                         
-                        <textarea name="Address" placeholder="Address" required=""  rows="3"></textarea>
+                        <textarea name="address" placeholder="address" required=""  rows="3"></textarea>
                         <div class="clear"></div>
                     </div>
                     <div class="form-left-to-w3l">
                         <span class="fa fa-phone" aria-hidden="true"></span>
-                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Male
-                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">FeMale
+                        <input type="radio" class="form-check-input" id="male" name="gender" value="male">Male
+                        <input type="radio" class="form-check-input" id="female" name="gender" value="femail">FeMale
 
                         <div class="clear"></div>
                     </div>
@@ -126,8 +125,8 @@
 	<!---728x90--->
     <footer class="copyrigh-wthree">
         <p>
-            © 2019 Gadget Sign Up Form. All Rights Reserved | Design by
-            <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a>
+            
+            <a href="http://www.W3Layouts.com" target="_blank"></a>
         </p>
     </footer>
 </body>

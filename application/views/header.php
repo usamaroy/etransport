@@ -58,11 +58,11 @@
       <a href="http://localhost/k2_project/html/web/lettings.php" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-small">Lettings</a>
       <a href="http://localhost/k2_project/html/web/sales.php" class="w3-bar-item  w3-button w3-right w3-padding-large w3-hide-small">Sales</a>
       <a href="http://localhost/k2_project/html/web/property_managment.php" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-small">Property Managment</a>
-      <a href="http://localhost/k2_project/index.php"  class="w3-bar-item  w3-button w3-right w3-padding-large w3-hide-small">Home</a>
+      <a href="<?= base_url()?>index_controller/index"  class="w3-bar-item  w3-button w3-right w3-padding-large w3-hide-small">Home</a>
       </div>
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="http://localhost/k2_project/index.php"  class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+      <a href="<?= base_url()?>index_controller/index"  class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
       <a href="http://localhost/k2_project/html/web/sales.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Sales</a>
       <a href="http://localhost/k2_project/index.php"  class="w3-bar-item w3-button" onclick="toggleFunction()">About Us</a>
       <a href="http://localhost/k2_project/html/web/contactus.php"  class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
