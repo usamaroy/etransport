@@ -11,16 +11,10 @@ class SignupController extends CI_Controller{
 
 
     public function signup(){
-        echo $FullName = $this->input->post('name');
-        echo  $Phone = $this->input->post('phone');
-        echo  $CNIC = $this->input->post('cnic');
-        echo $email = $this->input->post('email');
-        echo  $password = $this->input->post('password');
-        echo $City = $this->input->post('city');
-        echo  $provinces = $this->input->post('provinces');
-        echo  $Address = $this->input->post('address');
-        echo  $Gender = $this->input->post('gender');
+        
 
+        $this->load->model('loginmodel');
+        // $this->loginmodel->index();
 
     }
 }
