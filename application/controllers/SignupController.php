@@ -9,12 +9,15 @@ class SignupController extends CI_Controller{
         $this->load->view('signup_view');
     }
 
+    
+
 
     public function signup(){
         
 
         $this->load->model('loginmodel');
-        // $this->loginmodel->index();
+         $this->loginmodel->index();
 
     }
+
 }

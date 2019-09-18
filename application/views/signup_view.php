@@ -52,7 +52,7 @@
                     </div>
                     <div class="form-left-to-w3l">
                         <span class="fa fa-phone" aria-hidden="true"></span>
-                        <input type="text" name="phone" placeholder="phone" required="">
+                        <input type="text" name="contact" placeholder="contact" required="">
 
                         <div class="clear"></div>
                     </div>
