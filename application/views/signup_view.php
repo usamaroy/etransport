@@ -47,7 +47,7 @@
     </div>
     <div class="container">
   <h2></h2>
-  <p>Gender</p>
+  <p><b>Gender</b></p>
   <form action="/action_page.php">
     <div class="form-check-inline">
       <label class="form-check-label" for="radio1">
@@ -60,6 +60,7 @@
       </label>
     </div>
   </form>
+  <br></br>
 </div>
     <div class="form-group form-check">
       <label class="form-check-label">
@@ -85,10 +86,16 @@
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group">
-      <label for="pwd">PROVINCE</label>
-      <input type="password" class="w3-input form-control w3-animate-input" style="width:60%"  id="province" placeholder="Enter your province" name="province" required>
-      <div class="valid-feedback"></div>
-      <div class="invalid-feedback">Please fill out this field.</div>
+      <label for="sel1">Select provinces (select one):</label>
+      <select class="form-control" style="width:60%" id="sel1" name="sellist1">
+      <option></option>
+        <option>Punjab</option>
+        <option>Sindh</option>
+        <option>kpk</option>
+        <option>Balochistan</option>
+        <option>Fata</option>
+
+      </select>
     </div>
     <div class="form-group">
       <label for="pwd">PASSWORD</label>
@@ -96,6 +103,7 @@
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
+    
     
    
     
