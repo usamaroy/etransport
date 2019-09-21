@@ -51,10 +51,17 @@
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
+<<<<<<< HEAD
 
 
   <p>Gender</p>
 
+=======
+    <div class="container">
+  <h2></h2>
+  <p><b>Gender</b></p>
+  <form action="/action_page.php">
+>>>>>>> 120dcb3605fc84162502d999aa56c6f7b9bf2470
     <div class="form-check-inline">
       <label class="form-check-label" for="radio1">
         <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>male
@@ -65,7 +72,13 @@
         <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">female
       </label>
     </div>
+<<<<<<< HEAD
 
+=======
+  </form>
+  <br></br>
+</div>
+>>>>>>> 120dcb3605fc84162502d999aa56c6f7b9bf2470
     <div class="form-group form-check">
       <label class="form-check-label">
         <input class="form-check-input" type="checkbox" name="remember" required> I agree.
@@ -90,10 +103,16 @@
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group">
-      <label for="pwd">PROVINCE</label>
-      <input type="password" class="w3-input form-control w3-animate-input" style="width:60%"  id="province" placeholder="Enter your province" name="province" required>
-      <div class="valid-feedback"></div>
-      <div class="invalid-feedback">Please fill out this field.</div>
+      <label for="sel1">Select provinces (select one):</label>
+      <select class="form-control" style="width:60%" id="sel1" name="sellist1">
+      <option></option>
+        <option>Punjab</option>
+        <option>Sindh</option>
+        <option>kpk</option>
+        <option>Balochistan</option>
+        <option>Fata</option>
+
+      </select>
     </div>
     <div class="form-group">
       <label for="pwd">PASSWORD</label>
@@ -102,6 +121,7 @@
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
   
+    
     
    
     
