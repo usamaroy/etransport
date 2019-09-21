@@ -26,7 +26,7 @@
 
 <form action="<?php echo base_url()?>signupController/signup" method="POST" class="was-validated w3-padding-24">
 <fieldset>  <legend align="center"><span >
-<img src="http://localhost/k2_project/assets/image/logo1.png" style="margin-left: 40px;" height="50px" alt="Italian Trulli">
+<img src="<?php echo base_url()?>assets/img/logo1.png" style="margin-left: 40px;" height="50px" alt="Italian Trulli">
 <span class="w3-wide" style="font-family:Comic Sans MS;font-size:30px">TRANSPORT</span>
 </span></legend>
 <div class="row">
@@ -126,7 +126,7 @@
 
 </fieldset>
 <div align="center" class="form-group w3-padding">
-    <input type="submit" class="w3-btn w3-blue" value="submit">
+    <input type="submit" class="w3-btn w3-blue w3-hover-orange" value="submit">
     </div>
 </form>
 
