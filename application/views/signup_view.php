@@ -11,19 +11,24 @@
 </head>
 <style type="text/css">
 .bgimg {
-    background-image: url('https://wallpaperaccess.com/full/24866.jpg');
+    background-image: url('https://images.unsplash.com/photo-1458308034261-3353a8d12994?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
+    background-repeat: norepeat;
 }
 </style>
-<body class="bgimg">
+<body class="bgimg ">
 
 <div class="container  w3-padding-64">
-<img src="http://localhost/k2_project/assets/image/logo1.png" style="margin-left: 40px;" height="50px" alt="Italian Trulli">
-<h2 align="center">Etransport</h2>
-<div class="row" >
-<div class="col-sm-9 w3-card-4">
 
-<form action="/action_page.php" class="was-validated w3-padding-24">
-<fieldset>  <legend align="center">Login into System</legend>
+
+<div class="row " >
+
+<div class="col-sm-9 w3-card-4 w3-black w3-opacity">
+
+<form action="<?php echo base_url()?>signupController/signup" method="POST" class="was-validated w3-padding-24">
+<fieldset>  <legend align="center"><span >
+<img src="http://localhost/k2_project/assets/image/logo1.png" style="margin-left: 40px;" height="50px" alt="Italian Trulli">
+<span class="w3-wide" style="font-family:Comic Sans MS;font-size:30px">TRANSPORT</span>
+</span></legend>
 <div class="row">
     <div class="col-sm-6">
     <div class="form-group">
@@ -51,11 +56,18 @@
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
+<<<<<<< HEAD
   <p>Gender</p>
     <div class="container">
   <h2></h2>
   <p><b>Gender</b></p>
   <form action="/action_page.php">
+=======
+
+
+  <p><b>Gender</b></p>
+
+>>>>>>> 1bbc2e6937161b65b1689fc2e0ea459ba1528edc
 
     <div class="form-check-inline">
       <label class="form-check-label" for="radio1">
@@ -68,9 +80,15 @@
       </label>
     </div>
 
+<<<<<<< HEAD
   </form>
   <br></br>
 </div>
+=======
+
+
+
+>>>>>>> 1bbc2e6937161b65b1689fc2e0ea459ba1528edc
 
     <div class="form-group form-check">
       <label class="form-check-label">
@@ -127,7 +145,7 @@
 
 </fieldset>
 <div align="center" class="form-group w3-padding">
-    <button  type="submit" class="w3-btn w3-blue">Submit</button>
+    <input type="submit" class="w3-btn w3-blue" value="submit">
     </div>
 </form>
 
@@ -136,6 +154,9 @@
 
 
 </div>
+</div>
+
+<div class="col-sm-3">
 </div>
 
 </div>
