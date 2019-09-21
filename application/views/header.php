@@ -48,7 +48,7 @@
       <a href="#band" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-medium w3-hide-small">About US</a>
       <a href="http://localhost/k2_project/html/web/lettings.php" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-small">Lettings</a>
       <a href="http://localhost/k2_project/html/web/sales.php" class="w3-bar-item  w3-button w3-right w3-padding-large w3-hide-small">Sales</a>
-      <a href="http://localhost/k2_project/html/web/property_managment.php" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-small">Property Managment</a>
+      <a href="" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-small">Property Managment</a>
       <a href="<?= base_url()?>index_controller/index"  class="w3-bar-item  w3-button w3-right w3-padding-large w3-hide-small">Home</a>
       </div>
     <!-- Navbar on small screens -->
