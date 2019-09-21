@@ -7,17 +7,23 @@
     <?php
     $this->load->view('link');
     ?>
-    <title>Document</title>
+    <title>E-transport</title>
 </head>
-<body>
+<style type="text/css">
+.bgimg {
+    background-image: url('https://wallpaperaccess.com/full/24866.jpg');
+}
+</style>
+<body class="bgimg">
 
-<div class="container w3-padding-64">
-
-<div class="row">
+<div class="container  w3-padding-64">
+<img src="http://localhost/k2_project/assets/image/logo1.png" style="margin-left: 40px;" height="50px" alt="Italian Trulli">
+<h2 align="center">Etransport</h2>
+<div class="row" >
 <div class="col-sm-9 w3-card-4">
 
 <form action="/action_page.php" class="was-validated w3-padding-24">
-<fieldset>  <legend>Personalia:</legend>
+<fieldset>  <legend align="center">Login into System</legend>
 <div class="row">
     <div class="col-sm-6">
     <div class="form-group">
@@ -45,10 +51,10 @@
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
-    <div class="container">
-  <h2></h2>
+
+
   <p>Gender</p>
-  <form action="/action_page.php">
+
     <div class="form-check-inline">
       <label class="form-check-label" for="radio1">
         <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>male
@@ -59,8 +65,7 @@
         <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">female
       </label>
     </div>
-  </form>
-</div>
+
     <div class="form-group form-check">
       <label class="form-check-label">
         <input class="form-check-input" type="checkbox" name="remember" required> I agree.
@@ -68,7 +73,7 @@
         <div class="invalid-feedback">Check this checkbox to continue.</div>
       </label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+   
   
     </div>
     <div class="col-sm-6">
@@ -96,11 +101,16 @@
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
+  
     
    
     
 </div>
+
 </fieldset>
+<div align="center" class="form-group w3-padding">
+    <button  type="submit" class="w3-btn w3-blue">Submit</button>
+    </div>
 </form>
 
 </div>
