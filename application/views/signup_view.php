@@ -51,17 +51,12 @@
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
-<<<<<<< HEAD
-
-
   <p>Gender</p>
-
-=======
     <div class="container">
   <h2></h2>
   <p><b>Gender</b></p>
   <form action="/action_page.php">
->>>>>>> 120dcb3605fc84162502d999aa56c6f7b9bf2470
+
     <div class="form-check-inline">
       <label class="form-check-label" for="radio1">
         <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>male
@@ -72,13 +67,11 @@
         <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">female
       </label>
     </div>
-<<<<<<< HEAD
 
-=======
   </form>
   <br></br>
 </div>
->>>>>>> 120dcb3605fc84162502d999aa56c6f7b9bf2470
+
     <div class="form-group form-check">
       <label class="form-check-label">
         <input class="form-check-input" type="checkbox" name="remember" required> I agree.
@@ -98,7 +91,7 @@
     </div>
     <div class="form-group">
       <label for="pwd">CNIC</label>
-      <input type="password" class="w3-input form-control w3-animate-input" style="width:60%"  id="cnic" placeholder="Enter you cnic" name="cnic" required>
+      <input type="taxt" class="w3-input form-control w3-animate-input" style="width:60%"  id="cnic" placeholder="Enter you cnic" name="cnic" required>
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
@@ -120,9 +113,14 @@
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
+    <div class="container">
+  <h5>Address</h5>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+    </div>
   
-    
-    
+  
    
     
 </div>
