@@ -56,10 +56,18 @@
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
+<<<<<<< HEAD
+  <p>Gender</p>
+    <div class="container">
+  <h2></h2>
+  <p><b>Gender</b></p>
+  <form action="/action_page.php">
+=======
 
 
   <p><b>Gender</b></p>
 
+>>>>>>> 1bbc2e6937161b65b1689fc2e0ea459ba1528edc
 
     <div class="form-check-inline">
       <label class="form-check-label" for="radio1">
@@ -72,9 +80,15 @@
       </label>
     </div>
 
+<<<<<<< HEAD
+  </form>
+  <br></br>
+</div>
+=======
 
 
 
+>>>>>>> 1bbc2e6937161b65b1689fc2e0ea459ba1528edc
 
     <div class="form-group form-check">
       <label class="form-check-label">
@@ -95,7 +109,7 @@
     </div>
     <div class="form-group">
       <label for="pwd">CNIC</label>
-      <input type="password" class="w3-input form-control w3-animate-input" style="width:60%"  id="cnic" placeholder="Enter you cnic" name="cnic" required>
+      <input type="taxt" class="w3-input form-control w3-animate-input" style="width:60%"  id="cnic" placeholder="Enter you cnic" name="cnic" required>
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
@@ -117,9 +131,14 @@
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
+    <div class="container">
+  <h5>Address</h5>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+    </div>
   
-    
-    
+  
    
     
 </div>
