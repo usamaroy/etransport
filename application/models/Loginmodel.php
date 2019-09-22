@@ -8,7 +8,7 @@ class Loginmodel extends CI_Model {
 
             $data = array(
 
-                'fullname'  =>  $this->input->post('name'),
+                'fullname'  =>  $this->input->post('fullname'),
          'contact' => $this->input->post('contact'),
           'cnic' => $this->input->post('cnic'),
          'email' => $this->input->post('email'),
@@ -27,6 +27,26 @@ class Loginmodel extends CI_Model {
                echo "fail";
            }
         }
+
+
+        public function login()
+        {
+        $email  =   $this->input->post('email');
+        $pwd    =   $this->input->post('password'); 
+        
+ $query =    $this->db
+            ->where([
+
+                'email'     =>      $email,
+                'password'  =>      $pwd
+            ])->get('login');
+
+            if($query->num_row()){
+                return $query->row();
+            }else{
+                return FALSE;
+            }
+    }
        
 
     }

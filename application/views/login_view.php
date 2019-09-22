@@ -40,15 +40,33 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 		<?php echo form_open('LoginController/login')?>
 			<h2 class="sub-heading-wthree"> Login Here</h2>
+			<?php
+                if($error=$this->session->flashdata('login_failed')){?>
+                <div class="row w3-center w3-xlarge" style="color:red;">
+                    <div class="col-sm-8">
+                        <div class="text-warning">
+                            <h5 class="w3-code w3-red">
+                            <?php echo $error; ?>
+                            </h5>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <?php
+                }
+                ?>
 			<div class="main">
 				<div class="form-left-w3l">
-					<input type="email" name="email" placeholder="Email" required="">
+					<input type="email" name="email" placeholder="Email">
+				<div class="clearfix" style="color:red;"><?php echo form_error('email');?></div>
 				</div>
+				
 				<div class="form-right-w3ls ">
 
-					<input type="password" name="password" placeholder="Password" required="">
-
-					<div class="clearfix"></div>
+					<input type="password" name="password" placeholder="Password">
+				
+					<div class="clearfix" style="color:red;"><?php echo form_error('password'); ?></div>
 				</div>
 
 			</div>
@@ -74,6 +92,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</ul>
 			</div>
 
+			
 
 		<?php echo form_close();?>
 	</div>
