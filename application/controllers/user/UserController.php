@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Index_controller extends CI_Controller {
+class UserController extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,11 +20,11 @@ class Index_controller extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('index_view');
+		$this->load->view('cargo/index_cargo');
 		
 	}
 
-	public function index_dashboard(){
-		echo "This is index dashboard";
+	public function user_dashboard(){
+        $this->load->view('users/user_dashboard');
 	}
 }

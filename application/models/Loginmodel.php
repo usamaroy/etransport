@@ -8,7 +8,8 @@ class Loginmodel extends CI_Model {
 
             $data = array(
 
-                'fullname'  =>  $this->input->post('fullname'),
+                'first_name'  =>  $this->input->post('fname'),
+                'last_name'  =>  $this->input->post('lname'),
          'contact' => $this->input->post('contact'),
           'cnic' => $this->input->post('cnic'),
          'email' => $this->input->post('email'),
@@ -17,15 +18,38 @@ class Loginmodel extends CI_Model {
          'province' => $this->input->post('provinces'),
          'address' => $this->input->post('address'),
         'gender' => $this->input->post('gender'),
+
     );
          
+    $query =    $this->db
+                        ->where([
+                                'email'     =>      $this->input->post('email'),
+                                ])
+                                
+                        ->get('login');
 
-           $db=$this->db->insert("login",$data);
-           if($db){
-               echo "Insertsucces";
-           }else{
-               echo "fail";
-           }
+                if($query->num_rows()>0)
+                {
+                echo "<script>
+                alert('This email already Register');
+                window.location.href = 'index';
+                </script>";
+                }
+                    else{
+                            $db=$this->db->insert("login",$data);
+                                if($db)
+                                {
+                                    return redirect('LoginController/login');
+                                }
+                                else
+                                {
+                                    echo "fail";
+                                }
+                        }
+
+    
+
+
         }
 
 
@@ -41,7 +65,8 @@ class Loginmodel extends CI_Model {
                 'password'  =>      $pwd
             ])->get('login');
 
-            if($query->num_row()){
+            if($query->num_rows()){
+                
                 return $query->row();
             }else{
                 return FALSE;

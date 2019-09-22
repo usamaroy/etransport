@@ -56,39 +56,29 @@
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
-<<<<<<< HEAD
-  <p>Gender</p>
-    <div class="container">
-  <h2></h2>
-  <p><b>Gender</b></p>
-  <form action="/action_page.php">
-=======
+
 
 
   <p><b>Gender</b></p>
 
->>>>>>> 1bbc2e6937161b65b1689fc2e0ea459ba1528edc
+
 
     <div class="form-check-inline">
-      <label class="form-check-label" for="radio1">
-        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>male
+      <label class="form-check-label" for="gender">
+        <input type="radio" class="form-check-input" id="gender" name="gender" value="male" checked>male
       </label>
     </div>
     <div class="form-check-inline">
-      <label class="form-check-label" for="radio2">
-        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">female
+      <label class="form-check-label" for="gender">
+        <input type="radio" class="form-check-input" id="gender" name="gender" value="female">female
       </label>
     </div>
 
-<<<<<<< HEAD
-  </form>
-  <br></br>
-</div>
-=======
 
 
 
->>>>>>> 1bbc2e6937161b65b1689fc2e0ea459ba1528edc
+
+
 
     <div class="form-group form-check">
       <label class="form-check-label">
@@ -103,7 +93,7 @@
     <div class="col-sm-6">
     <div class="form-group">
       <label for="uname">LAST NAME</label>
-      <input type="text" class="w3-input form-control w3-animate-input" style="width:60%"  id="fname" placeholder="Enter full name" name="fname" required>
+      <input type="text" class="w3-input form-control w3-animate-input" style="width:60%"  id="lname" placeholder="Enter Last name" name="lname" required>
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
@@ -114,34 +104,35 @@
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group">
-      <label for="sel1">Select provinces (select one):</label>
-      <select class="form-control" style="width:60%" id="sel1" name="sellist1">
+      <label for="sel1">Select provinces</label>
+      <select class="form-control" style="width:60%" id="sel1" name="provinces">
       <option></option>
-        <option>Punjab</option>
-        <option>Sindh</option>
-        <option>kpk</option>
-        <option>Balochistan</option>
-        <option>Fata</option>
+        <option value="punjab">Punjab</option>
+        <option value="sindh">Sindh</option>
+        <option value="kpk">kpk</option>
+        <option value="balochistan">Balochistan</option>
+        <option value="fata">Fata</option>
+        <option value="gilgit">Gilgit</option>
 
       </select>
     </div>
     <div class="form-group">
       <label for="pwd">PASSWORD</label>
-      <input type="password" class="w3-input form-control w3-animate-input" style="width:60%"  id="pwd" placeholder="Enter password" name="pswd" required>
+      <input type="password" class="w3-input form-control w3-animate-input" style="width:60%"  id="pwd" placeholder="Enter password" name="password" required>
       <div class="valid-feedback"></div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
-    <div class="container">
+    
   <h5>Address</h5>
-  <form action="/action_page.php">
+
     <div class="form-group">
-      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+      <textarea class="form-control" rows="5" id="address" name="address"></textarea>
     </div>
   
   
    
     
-</div>
+
 
 </fieldset>
 <div align="center" class="form-group w3-padding">

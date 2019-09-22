@@ -23,4 +23,9 @@ class CargoController extends CI_Controller {
 		$this->load->view('cargo/index_cargo');
 		
 	}
+
+	public function cargo_dashboard()
+	{
+		$this->load->view('cargo/cargo_dashboard');
+	}
 }

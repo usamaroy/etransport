@@ -21,16 +21,39 @@ class LoginController extends CI_Controller {
 	 */
 	public function index()
 	{
-// 		$this->load->helper('form');
-// 		$newdata = array(
-//         'username'  => 'johndoe',
-//         'email'     => 'johndoe@some-site.com',
-//         'logged_in' => TRUE
-// );
+		if($login_data=$this->session->userdata('user_id'))
+		{
+			if($login_data)
+			{
+				$this->session->set_userdata('user_id',$login_data);
+				// return redirect('admin/dashboard',$login_data);
+			$role = $login_data->user_role;
+					if($role=='')
+					{
+						// return redirect('admin/dashboard',$login_data);
+					}
+					elseif($role=='transport')
+					{
+						 return redirect('transport/TransportController/transport_dashboard',$login_data);
+					}
+					elseif($role=='cargo')
+					{
+						return redirect('cargo/CargoController/cargo_dashboard',$login_data);
+					}
+					else
+					{
+						return redirect('user/UserController/user_dashboard',$login_data);
+					}
+			}
+			else
+			{
+				$this->session->set_flashdata('login_failed','Email or Password not matched');
+                        return redirect('LoginController/index');
+			}
+		}
 
-// $this->session->set_userdata('login',23);
 
-$this->load->view('login_view');
+	$this->load->view('login_view');
 		
 	}
 
@@ -56,7 +79,24 @@ $this->load->view('login_view');
 			if($login_data)
 			{
 				$this->session->set_userdata('user_id',$login_data);
-				return redirect('admin/dashboard',$login_data);
+				// return redirect('admin/dashboard',$login_data);
+			$role = $login_data->user_role;
+					if($role=='')
+					{
+						// return redirect('admin/dashboard',$login_data);
+					}
+					elseif($role=='transport')
+					{
+						 return redirect('transport/TransportController/transport_dashboard',$login_data);
+					}
+					elseif($role=='cargo')
+					{
+						return redirect('cargo/CargoController/cargo_dashboard',$login_data);
+					}
+					else
+					{
+						return redirect('user/UserController/user_dashboard',$login_data);
+					}
 			}
 			else
 			{
@@ -72,5 +112,12 @@ $this->load->view('login_view');
 		}
 
 	}
+
+	function __construct() {
+        parent::__construct();
+        if(!$this->session->userdata('user_id')){
+            redirect('LoginController');
+        }
+    }
 	
 }

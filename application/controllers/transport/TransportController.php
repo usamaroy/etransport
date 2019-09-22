@@ -23,4 +23,9 @@ class TransportController extends CI_Controller {
 		$this->load->view('transport/index_transport');
 		
 	}
+
+	public function transport_dashboard()
+	{
+		$this->load->view('transport/transport_dashboard');
+	}
 }
