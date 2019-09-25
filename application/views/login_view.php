@@ -31,6 +31,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link href="<?php echo base_url()?>assets/css/logincss.css" rel='stylesheet' type='text/css' media="all">
 	<!--//style sheet end here-->
 	<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+	<style>
+	.btn{
+		border:none;
+		display:inline-block;
+		padding:13px 45px;
+		vertical-align:
+		middle;overflow:
+		hidden;text-decoration:
+		none;color:inherit;
+		background-color:orangered;
+		text-align:center;
+		cursor:pointer;
+		white-space:nowrapt;
+	}
+	</style>
 </head>
 
 <body>
@@ -71,7 +87,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 			</div>
 			<div class="btnn">
-				<button type="submit">Login</button><br>
+				<button type="submit">Login</button>  <a href="<?= base_url('SignupController/index')?>" class="btn">Register</a> <br>
 				<div class="left-side w3l">
 					<input type="checkbox" class="checked">
 					<span class="span">Remember me </span>

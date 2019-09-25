@@ -1,3 +1,13 @@
 <?php
-$this->load->view('transport/transport_header');
+$this->load->view('header');
+
+?>
+
+
+
+
+
+<?php
+$this->load->view('footer');
+
 ?>

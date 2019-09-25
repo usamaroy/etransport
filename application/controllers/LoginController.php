@@ -30,7 +30,7 @@ class LoginController extends CI_Controller {
 			$role = $login_data->user_role;
 					if($role=='')
 					{
-						// return redirect('admin/dashboard',$login_data);
+						return redirect('get_role_view',$login_data);
 					}
 					elseif($role=='transport')
 					{
@@ -81,9 +81,10 @@ class LoginController extends CI_Controller {
 				$this->session->set_userdata('user_id',$login_data);
 				// return redirect('admin/dashboard',$login_data);
 			$role = $login_data->user_role;
-					if($role=='')
+					if($role==null)
 					{
-						// return redirect('admin/dashboard',$login_data);
+						
+						$this->load->view('get_role_view',$login_data);
 					}
 					elseif($role=='transport')
 					{
@@ -111,6 +112,12 @@ class LoginController extends CI_Controller {
 			$this->load->view('login_view');
 		}
 
+	}
+
+	function logout()
+	{
+		$this->session->unset_userdata('user_id');
+		return redirect('LoginController/login');
 	}
 
 	// function __construct() {
