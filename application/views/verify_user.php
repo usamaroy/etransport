@@ -10,7 +10,7 @@ $id=$this->session->userdata('user_id');
 
 <div class="container w3-padding-64">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<form action="<?=base_url('LoginController/test')?>" method="POST" enctype="multipart/form-data">
+<form action="<?=base_url('LoginController/verify_user')?>" method="POST" enctype="multipart/form-data">
   <div class="w3-card-4">
 <div class="row ">
   <div class="col-sm-12">
