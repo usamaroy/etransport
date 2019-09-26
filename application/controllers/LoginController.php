@@ -27,10 +27,11 @@ class LoginController extends CI_Controller {
 			{
 				$this->session->set_userdata('user_id',$login_data);
 				// return redirect('admin/dashboard',$login_data);
-			$role = $login_data->user_role;
-					if($role=='')
+			echo $role = $login_data->user_role;
+					if($role==Null)
 					{
-						return redirect('get_role_view',$login_data);
+						echo "dada";
+						// return redirect('verify_user',$login_data);
 					}
 					elseif($role=='transport')
 					{
