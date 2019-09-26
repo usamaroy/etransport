@@ -82,10 +82,11 @@ class LoginController extends CI_Controller {
 				$this->session->set_userdata('user_id',$login_data);
 				// return redirect('admin/dashboard',$login_data);
 			$role = $login_data->user_role;
-					if($role==null)
+					if($role==='null')
 					{
 						
-						$this->load->view('get_role_view',$login_data);
+						$this->load->view('verify_user');
+					
 					}
 					elseif($role=='transport')
 					{
@@ -120,6 +121,34 @@ class LoginController extends CI_Controller {
 		$this->session->unset_userdata('user_id');
 		return redirect('LoginController/login');
 	}
+
+	function verify_user(){
+		$submit  =   $this->input->post('submit');
+		$this->load->view('verify_user');
+	}
+
+	function test(){
+	echo 	$submit  =   $this->input->post('submit');
+
+	$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+if(isset($submit)) {
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+}
+		
+
+}
+
 
 	// function __construct() {
  //        parent::__construct();
