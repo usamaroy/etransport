@@ -12,6 +12,7 @@ $id=$this->session->userdata('user_id');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <form action="<?=base_url('LoginController/verify_user')?>" method="POST" enctype="multipart/form-data">
   <div class="w3-card-4">
+    <input type="hidden" name="id" value="<?= $id->id;?>">
 <div class="row ">
   <div class="col-sm-12">
   <div class="w3-row-padding w3-center w3-margin-top">

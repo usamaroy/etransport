@@ -27,24 +27,27 @@ class LoginController extends CI_Controller {
 			{
 				$this->session->set_userdata('user_id',$login_data);
 				// return redirect('admin/dashboard',$login_data);
+				require('FunctionController.php');
 			echo $role = $login_data->user_role;
-					if($role==Null)
-					{
-						echo "dada";
-						// return redirect('verify_user',$login_data);
-					}
-					elseif($role=='transport')
-					{
-						 return redirect('transport/TransportController/transport_dashboard',$login_data);
-					}
-					elseif($role=='cargo')
-					{
-						return redirect('cargo/CargoController/cargo_dashboard',$login_data);
-					}
-					else
-					{
-						return redirect('user/UserController/user_dashboard',$login_data);
-					}
+					// if($role==Null)
+					// {
+					// 	echo "dada";
+					// 	// return redirect('verify_user',$login_data);
+					// }
+					// elseif($role=='transport')
+					// {
+					// 	 return redirect('transport/TransportController/transport_dashboard',$login_data);
+					// }
+					// elseif($role=='cargo')
+					// {
+					// 	return redirect('cargo/CargoController/cargo_dashboard',$login_data);
+					// }
+					// else
+					// {
+					// 	return redirect('user/UserController/user_dashboard',$login_data);
+					// }
+					$fun  = new FunctionController();
+					$fun->redirect_user($role,'transport',$login_data,'transport/TransportController','transport_dashboard');
 			}
 			else
 			{
@@ -127,7 +130,12 @@ class LoginController extends CI_Controller {
 			if($submit)
 			{
 				$this->load->model('loginmodel');
-				$this->loginmodel->verify_user();
+				$response = $this->loginmodel->verify_user();
+
+				if($response=true){
+					$this->session->set_flashdata('response_success','Now! were set');
+                        return redirect('LoginController/index');
+				}
 		}
 		else
 		{
