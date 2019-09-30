@@ -1,3 +1,4 @@
+
 <!-- Footer -->
     <!-- ============================================================== -->
     <!-- End Wrapper -->
@@ -28,6 +29,7 @@
     <script src="<?=base_url()?>assets/libs/flot/jquery.flot.crosshair.js"></script>
     <script src="<?=base_url()?>assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
     <script src="<?=base_url()?>assets/dist/js/pages/chart/chart-page-init.js"></script>
+    
 
 </body>
 

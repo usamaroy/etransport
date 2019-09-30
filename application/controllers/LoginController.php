@@ -1,7 +1,7 @@
 
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+require('FunctionController.php');
 class LoginController extends CI_Controller {
 
 	/**
@@ -21,33 +21,34 @@ class LoginController extends CI_Controller {
 	 */
 	public function index()
 	{
+		
 		if($login_data=$this->session->userdata('user_id'))
 		{
 			if($login_data)
 			{
 				$this->session->set_userdata('user_id',$login_data);
-				// return redirect('admin/dashboard',$login_data);
-				require('FunctionController.php');
+				return redirect('LoginController/index',$login_data);
+				
 			echo $role = $login_data->user_role;
-					// if($role==Null)
-					// {
-					// 	echo "dada";
-					// 	// return redirect('verify_user',$login_data);
-					// }
-					// elseif($role=='transport')
-					// {
-					// 	 return redirect('transport/TransportController/transport_dashboard',$login_data);
-					// }
-					// elseif($role=='cargo')
-					// {
-					// 	return redirect('cargo/CargoController/cargo_dashboard',$login_data);
-					// }
-					// else
-					// {
-					// 	return redirect('user/UserController/user_dashboard',$login_data);
-					// }
-					$fun  = new FunctionController();
-					$fun->redirect_user($role,'transport',$login_data,'transport/TransportController','transport_dashboard');
+					if($role==Null)
+					{
+						echo "user";
+						 //return redirect('verify_user',$login_data);
+					}
+					elseif($role=='transport')
+					{
+						 return redirect('transport/TransportController/transport_dashboard',$login_data);
+					}
+					elseif($role=='cargo')
+					{
+						return redirect('cargo/CargoController/cargo_dashboard',$login_data);
+					}
+					else
+					{
+						return redirect('user/UserController/user_dashboard',$login_data);
+					}
+					// $fun  = new FunctionController();
+					// $fun->redirect_user($role,'transport',$login_data,'transport/TransportController','transport_dashboard');
 			}
 			else
 			{
@@ -79,11 +80,11 @@ class LoginController extends CI_Controller {
 		{
 			$this->load->model('loginmodel');
 			$login_data =$this->loginmodel->login();
-
+		
 			if($login_data)
 			{
 				$this->session->set_userdata('user_id',$login_data);
-				// return redirect('admin/dashboard',$login_data);
+				
 			$role = $login_data->user_role;
 					if($role==='null')
 					{
@@ -129,13 +130,14 @@ class LoginController extends CI_Controller {
 		$submit  =   $this->input->post('submit');
 			if($submit)
 			{
-				$this->load->model('loginmodel');
-				$response = $this->loginmodel->verify_user();
+				echo "dada";
+				// $this->load->model('loginmodel');
+				// $response = $this->loginmodel->verify_user();
 
-				if($response=true){
-					$this->session->set_flashdata('response_success','Now! were set');
-                        return redirect('LoginController/index');
-				}
+				// if($response=true){
+				// 	$this->session->set_flashdata('response_success','Now! were set');
+                //         return redirect('LoginController/index');
+				// }
 		}
 		else
 		{
@@ -144,18 +146,13 @@ class LoginController extends CI_Controller {
 		
 	}
 
-	function test(){
-	 
-		
-
-}
-
 
 	// function __construct() {
- //        parent::__construct();
- //        if(!$this->session->userdata('user_id')){
- //            redirect('LoginController');
- //        }
- //    }
+    //     parent::__construct();
+    //     if(!$this->session->userdata('user_id')){
+    //         redirect('LoginController');
+		
+	// 	}
+    // }
 	
 }
