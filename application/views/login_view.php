@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 
 <head>
-	<title>Communal Login Form a Responsive Widget Template :: w3layouts </title>
+	<title>E-TRANSPORT </title>
 	<!-- Meta tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -51,7 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <body>
 	<h1 class="header-w3ls">
-		Communal Login Form</h1>
+		E-TRANSPORT</h1>
 	<div class="appointment-w3">
 
 		<?php echo form_open('LoginController/login')?>

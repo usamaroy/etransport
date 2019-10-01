@@ -11,7 +11,7 @@
 </head>
 <style type="text/css">
 .bgimg {
-    background-image: url('https://images.unsplash.com/photo-1458308034261-3353a8d12994?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
+    background-image: url('https://images.unsplash.com/photo-1425342605259-25d80e320565?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
     background-repeat: norepeat;
 }
 </style>

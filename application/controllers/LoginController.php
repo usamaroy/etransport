@@ -130,14 +130,15 @@ class LoginController extends CI_Controller {
 		$submit  =   $this->input->post('submit');
 			if($submit)
 			{
-				echo "dada";
-				// $this->load->model('loginmodel');
-				// $response = $this->loginmodel->verify_user();
+				
+				$this->load->model('loginmodel');
+				$response = $this->loginmodel->verify_user();
 
-				// if($response=true){
-				// 	$this->session->set_flashdata('response_success','Now! were set');
-                //         return redirect('LoginController/index');
-				// }
+				 if($response==true){
+				  $this->session->set_flashdata('response_success','Now! were set');
+				
+                     // return redirect('LoginController/index');
+				}
 		}
 		else
 		{

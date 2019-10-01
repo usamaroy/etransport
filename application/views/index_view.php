@@ -2,13 +2,13 @@
 <?php include_once "header.php"?>
 <style>
 .half1 {
-background-image: url('http://yesofcorsa.com/wp-content/uploads/2017/01/4K-Truck-Desktop-Wallpaper-For-PC-1024x640.jpg');
+background-image: url('https://images.unsplash.com/photo-1506306460327-3164753b74c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
 min-height: 100%;
 background-position: center;
 background-size: cover;
 }
 .half2 {
-background-image: url('https://images.wallpaperscraft.com/image/road_skyscrapers_cars_121725_3840x2160.jpg');
+background-image: url('https://images.unsplash.com/photo-1518430272387-254558840136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=699&q=80');
 min-height: 100%;
 background-position: center;
 background-size: cover;
