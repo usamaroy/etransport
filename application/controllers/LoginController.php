@@ -19,9 +19,18 @@ class LoginController extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	 /**
+	  * INDEX FUNCTION
+	  *	This function have two different tasks
+	  * 1)	=>	load (login_view)
+	*	2)	=>	check if ::SESSION  SET than redirect acording user role
+
+	  */
 	public function index()
 	{
 		
+		// CHECK ::SESSION AND THAN REDIRECT ACCORDING TO USER ROLE
 		if($login_data=$this->session->userdata('user_id'))
 		{
 			if($login_data)
@@ -52,38 +61,39 @@ class LoginController extends CI_Controller {
 			}
 			else
 			{
+					
 				$this->session->set_flashdata('login_failed','Email or Password not matched');
                         return redirect('LoginController/index');
 			}
 		}
 
-
+		//Load View
 	$this->load->view('login_view');
 		
 	}
 
-	public function admin_login(){
-		
-	echo $email = $this->input->post('email');
-	echo  $password = $this->input->post('password');
-	}
+	
 
 	public function login()
 	{
 
+		//Load Library
+		
+	/*** Load form Validation*/	$this->load->library('form_validation');
+	/*** set_rule for Email*/	$this->form_validation->set_rules('email','Email:','trim|required|valid_email'); 
+	/*** set_rule for password*/	$this->form_validation->set_rules('password','Password','trim|required|min_length[8]');
+	/*** set_rule for error delimeter*/	$this->form_validation->set_error_delimiters('<div class="text-danger">','</div>');
 
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('email','Email:','trim|required|valid_email');
-		$this->form_validation->set_rules('password','Password','trim|required|min_length[8]');
-		$this->form_validation->set_error_delimiters('<div class="text-danger">','</div>');
+
 		if($this->form_validation->run()==TRUE)
 		{
 			$this->load->model('loginmodel');
 			$login_data =$this->loginmodel->login();
 		
+//CHECK IF LOGIN FAILED THAN FLASH Message apears on login controller
 			if($login_data)
 			{
-				$this->session->set_userdata('user_id',$login_data);
+				$this->session->set_userdata('user_id',$login_data); /*** set seesion*/
 				
 			$role = $login_data->user_role;
 					if($role==='null')
@@ -120,12 +130,12 @@ class LoginController extends CI_Controller {
 
 	}
 
-	function logout()
-	{
-		$this->session->unset_userdata('user_id');
-		return redirect('LoginController/login');
-	}
-
+	
+/*** 
+ * 
+ * Verify users after ::Register
+ * 
+*/
 	function verify_user(){
 		$submit  =   $this->input->post('submit');
 			if($submit)
@@ -134,6 +144,7 @@ class LoginController extends CI_Controller {
 				$this->load->model('loginmodel');
 				$response = $this->loginmodel->verify_user();
 
+				/*** Check Response  @true || @false than respond*/
 				 if($response==true){
 				  $this->session->set_flashdata('response_success','Now! were set');
 				
@@ -142,11 +153,22 @@ class LoginController extends CI_Controller {
 		}
 		else
 		{
+			/*** laod View*/
 			$this->load->view('verify_user');
 		}
 		
 	}
 
+
+
+	
+
+		// LOGOUT or Destroy::SESSION
+	function logout()
+	{
+		$this->session->unset_userdata('user_id');
+		return redirect('LoginController/login');
+	}
 
 	// function __construct() {
     //     parent::__construct();

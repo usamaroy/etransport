@@ -15,6 +15,11 @@ class FunctionController {
 				
 	}
 	
+	 /***
+	  *  
+	  * Get ::IP Address from client
+	  *
+	 */
 	public function get_client_ip() {
 		$ipaddress = '';
 		if (getenv('HTTP_CLIENT_IP'))

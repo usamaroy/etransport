@@ -4,8 +4,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Loginmodel extends CI_Model {
 
 
+        /*** 
+         * 
+         * Registerd User in ::DB
+         * 
+        */
         function index($ip){
 
+            /*** Store Data input in Array */
             $data = array(
 
                     'first_name'  =>  $this->input->post('fname'),
@@ -22,7 +28,9 @@ class Loginmodel extends CI_Model {
                         
                 );
          
-               
+               /*** t
+                * CHeck email exist from @login ::TABLE 
+                */
                     $query  = $this->db
                         ->where([
                                 'email'     =>      $this->input->post('email'),
@@ -30,7 +38,10 @@ class Loginmodel extends CI_Model {
                         ->get('login');
 
 
-
+                /*** 
+                 * 
+                 *  IF num_rows > 0 ::Than script generate
+                */
                 if($query->num_rows()>0)
                 {
                     echo "<script>
@@ -56,6 +67,11 @@ class Loginmodel extends CI_Model {
         }
 
 
+        /*** 
+         * 
+         * Login User 
+         */
+
 
         public function login()
         {
@@ -76,10 +92,21 @@ class Loginmodel extends CI_Model {
                 return FALSE;
             }
     }
+
+
+
+
        function verify_user()
        {
 
                     $submit  =   $this->input->post('submit');
+
+                    /*** 
+                     * 
+                     * 
+                     *  Image Stored PROCESS  @@Start
+                     * 
+                     */
                     $target_dir = "assets/data_image/";
                     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
                     $uploadOk = 1;
@@ -117,12 +144,24 @@ class Loginmodel extends CI_Model {
                     if ($uploadOk == 0) {
                         echo "Sorry, your file was not uploaded.";
                     // if everything is ok, try to upload file
-                    } else {
+                    } 
+                    
+                        /*** 
+                     * 
+                     * 
+                     *  @mage Stored PROCESS @end
+                     * 
+                     */
+                    
+                    
+                    else {
+                            /***  move file into folder*/
                         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                             $data = array( 
                                 'user_role'      => $this->input->post('user_role'),
                                 'image'         =>  $_FILES["fileToUpload"]["name"],
                             );
+                            
                             
                             $this->db->where('id', $this->input->post('id'));
                             
