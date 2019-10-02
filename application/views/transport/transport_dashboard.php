@@ -75,8 +75,8 @@ $this->load->view('header');
 
 </div>
 <!-- The Modal -->
-<div class="modal" id="myModal">
-    <div class="modal-dialog modal-dialog-scrollable">
+<div class="modal w3-animate-zoom" id="myModal">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
       <div class="modal-content">
       
         <!-- Modal Header -->
@@ -87,11 +87,53 @@ $this->load->view('header');
         
         <!-- Modal body -->
         <div class="modal-body">
-          <h3>Some text to enable scrolling..</h3>
-          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="card">
+                    <div class="card-body wizard-content">
+                        <h4 class="card-title">Basic Form Example</h4>
+                        <h6 class="card-subtitle"></h6>
+                        <form id="example-form" action="#" class="m-t-40">
+                            <div>
+                                <h3>Vehicle Details</h3>
+                                <section>
+                                    <label for="userName">Vehicle Name *</label>
+                                    <input id="vehicle_name" name="vehicle_name" type="text" class="required form-control">
+                                    <label for="vehicle_owner">Owner Name *</label>
+                                    <input id="vehicle_owner" name="vehicle_owner" type="text" class="required form-control">
+                                    <label for="vehicle_color">Vehicle Color *</label>
+                                    <input id="vehicle_color" name="vehicle_color" type="text" class="required form-control">
+                                    <label for="vehicle_model">Vehicle Model *</label>
+                                    <input id="vehicle_model" name="vehicle_model" type="text" class="required form-control">
+                                  
+                                    <p>(*) Mandatory</p>
+                                </section>
+                                <h3>Engine Detail</h3>
+                                <section>
+                                <label for="engine_no">Engine No# *</label>
+                                    <input id="engine_no" name="engine_no" type="text" class="required form-control">
+                                    <label for="chasis_no">chasis NO# *</label>
+                                    <input id="chasis_no" name="chasis_no" type="text" class="required form-control">
+                                    <label for="chasis_no">Seat Capacity *</label>
+                                    <input id="seat_capacity" name="seat_capacity" type="text" class="required form-control">
+                                    <label for="chasis_no">Vehicle Type *</label>
+                                    <input id="vehicle_type" name="vehicle_type" type="text" class="required form-control">
+                                    <label for="chasis_no">Registration NO#</label>
+                                    <input id="reg_no" name="reg_no" type="text" class="required form-control">
+                                    
+                                    <p>(*) Mandatory</p>
+                                </section>
+                                <h3 >Additional Detail</h3>
+                                <section>
+                                    
+                                </section>
+                                <h3>Finish</h3>
+                                <section>
+                                    <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">
+                                    <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+                                </section>
+                            </div>
+                        </form>
+                    </div>
+                </div>
         </div>
         
         <!-- Modal footer -->
@@ -107,22 +149,50 @@ $this->load->view('header');
 <script src="<?=base_url('assets/extra-libs/multicheck/datatable-checkbox-init.js');?>"></script>
     <script src="<?= base_url('assets/extra-libs/multicheck/jquery.multicheck.js')?>"></script>
     <script src="<?=base_url('assets/extra-libs/DataTables/datatables.min.js');?>"></script>
+    <script src="<?=base_url();?>assets/libs/jquery-steps/build/jquery.steps.min.js"></script>
+    <script src="<?=base_url();?>assets/libs/jquery-validation/dist/jquery.validate.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
+   
  $('#zero_config').DataTable();
 
- $('#add_data').click(function() {
+
+
+    $('#add_data').click(function() {
 /* Act on the event */
 
-// $('#myModal').modal('show');
-
-alert('dada');
+$('#myModal').modal('show');
 
 
 
-});
+    });
 
-    )};
+
+    var form = $("#example-form");
+    form.validate({
+        errorPlacement: function errorPlacement(error, element) { element.before(error); },
+        rules: {
+            confirm: {
+                equalTo: "#password"
+            }
+        }
+    });
+     form.children("div").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        transitionEffect: "slideLeft",
+        onStepChanging: function(event, currentIndex, newIndex) {
+            form.validate().settings.ignore = ":disabled,:hidden";
+            return form.valid();
+        },
+        onFinishing: function(event, currentIndex) {
+            form.validate().settings.ignore = ":disabled";
+            return form.valid();
+        },
+        onFinished: function(event, currentIndex) {
+            alert("Submitted!");
+        }
+    });
+
 </script>
 
 
