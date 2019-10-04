@@ -4,14 +4,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class FunctionController {
 
 
-    private function redirect_user($role,$role_type,$data=null,$controller,$controller_function)
+    private function redirect_dash($user_role)
     {
 
        
-					if($role==$role_type)
-					{
-						 return redirect($controller/$controller_function,$data);
-					}
+		if($user_role=='transport'){
+			echo base_url('tdash');
+		}
+		elseif($user_role=='cargo'){
+			echo base_url('cdash');
+		}
+		elseif($user_role=='user'){
+			echo base_url('udash');
+		}
 				
 	}
 	
@@ -38,6 +43,16 @@ class FunctionController {
 			$ipaddress = 'UNKNOWN';
 		return $ipaddress;
 	}
+
+
+	//trim data
+
+	function test_input($data) {
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	  }
 	
 	
 }

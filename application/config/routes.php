@@ -50,5 +50,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'Index_controller';
-$route['404_override'] = '';
+//$route['function'] = 'FunctionController';
+$route['tdash'] = 'transport/TransportController/transport_dashboard';
+$route['cdash'] = 'cargo/CargoController/cargo_dashboard';
+$route['udash'] = 'user/UserController/user_dashboard';
+$route['login'] = 'LoginController/index';
+$route['logout'] = 'LoginController/logout';
+
 $route['translate_uri_dashes'] = FALSE;
+

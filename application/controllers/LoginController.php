@@ -46,15 +46,15 @@ class LoginController extends CI_Controller {
 					}
 					elseif($role=='transport')
 					{
-						 return redirect('transport/TransportController/transport_dashboard',$login_data);
+						 return redirect('tdash',$login_data);
 					}
 					elseif($role=='cargo')
 					{
-						return redirect('cargo/CargoController/cargo_dashboard',$login_data);
+						return redirect('cdash',$login_data);
 					}
 					else
 					{
-						return redirect('user/UserController/user_dashboard',$login_data);
+						return redirect('udash',$login_data);
 					}
 					// $fun  = new FunctionController();
 					// $fun->redirect_user($role,'transport',$login_data,'transport/TransportController','transport_dashboard');
@@ -63,7 +63,7 @@ class LoginController extends CI_Controller {
 			{
 					
 				$this->session->set_flashdata('login_failed','Email or Password not matched');
-                        return redirect('LoginController/index');
+                        return redirect('login');
 			}
 		}
 
@@ -104,15 +104,15 @@ class LoginController extends CI_Controller {
 					}
 					elseif($role=='transport')
 					{
-						 return redirect('transport/TransportController/transport_dashboard',$login_data);
+						 return redirect('tdash',$login_data);
 					}
 					elseif($role=='cargo')
 					{
-						return redirect('cargo/CargoController/cargo_dashboard',$login_data);
+						return redirect('',$login_data);
 					}
 					else
 					{
-						return redirect('user/UserController/user_dashboard',$login_data);
+						return redirect('udash',$login_data);
 					}
 			}
 			else
@@ -167,7 +167,7 @@ class LoginController extends CI_Controller {
 	function logout()
 	{
 		$this->session->unset_userdata('user_id');
-		return redirect('LoginController/login');
+		return redirect('login');
 	}
 
 	// function __construct() {

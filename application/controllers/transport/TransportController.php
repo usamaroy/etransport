@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+// require('FunctionController.php');
 class TransportController extends CI_Controller {
 
 	/**
@@ -18,14 +19,30 @@ class TransportController extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	
 	public function index()
 	{
+		
 		$this->load->view('transport/index_transport');
 		
 	}
 
-	public function transport_dashboard()
+	 function transport_dashboard()
 	{
-		$this->load->view('transport/transport_dashboard');
+		$this->load->model('TransportModel');
+		$data =  $this->TransportModel->index();
+		
+		$this->load->view('transport/transport_dashboard',['data' => $data]);
+	}
+
+
+
+	public function store_vehicle_info(){
+		//$this->function;
+		// $fun = new FunctionController;
+		// $ip =  $fun->get_client_ip();
+		$this->load->model('TransportModel');
+		$response = $this->TransportModel->store_vehicle_info();
 	}
 }

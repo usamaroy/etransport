@@ -1,8 +1,10 @@
 <?php
 $this->load->view('header');
+$id=$this->session->userdata('user_id');
 
 ?>
 <div class="page-wrapper">
+    
 <div class="container-fluid">
 
 
@@ -19,51 +21,36 @@ $this->load->view('header');
                                     <table id="zero_config" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>owner Name</th>
+                                                <th>reg no#</th>
+                                                <th>vehicle</th>
+                                                <th>color</th>
+                                                <th>engine no#</th>
+                                                <th>chasis no#</th>
+                                                <th>model</th>
+                                                <th>type</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php 
+                                            
+                                            foreach($data as $data):?>
                                             <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
-                                                <td>$320,800</td>
+                                                <td><?=$data['vehicle_owner']?></td>
+                                                <td><?=$data['reg_no']?></td>
+                                                <td><?=$data['vehicle_name']?></td>
+                                                <td><?=$data['vehicle_color']?></td>
+                                                <td><?=$data['engine_no']?></td>
+                                                <td><?=$data['chasis_no']?></td>
+                                                <td><?=$data['vehicle_model']?></td>
+                                                <td><?=$data['vehicle_type']?></td>
+                                                <td><?=$data['status']?></td>
                                             </tr>
-                                            <tr>
-                                                <td>Garrett Winters</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>63</td>
-                                                <td>2011/07/25</td>
-                                                <td>$170,750</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ashton Cox</td>
-                                                <td>Junior Technical Author</td>
-                                                <td>San Francisco</td>
-                                                <td>66</td>
-                                                <td>2009/01/12</td>
-                                                <td>$86,000</td>
-                                            </tr>
+<?php endforeach;?>
                                             
                                         </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
-                                        </tfoot>
+                                        
                                     </table>
                                 </div>
 
@@ -96,13 +83,13 @@ $this->load->view('header');
                                 <h3>Vehicle Details</h3>
                                 <section>
                                     <label for="userName">Vehicle Name *</label>
-                                    <input id="vehicle_name" name="vehicle_name" type="text" class="required form-control">
+                                    <input id="vehicle_name" name="vehicle_name" type="text" placeholder="e.g Honda City" class="required form-control">
                                     <label for="vehicle_owner">Owner Name *</label>
-                                    <input id="vehicle_owner" name="vehicle_owner" type="text" class="required form-control">
+                                    <input id="vehicle_owner" name="vehicle_owner" type="text" value="<?= $id->first_name;?>"class="required form-control">
                                     <label for="vehicle_color">Vehicle Color *</label>
-                                    <input id="vehicle_color" name="vehicle_color" type="text" class="required form-control">
+                                    <input id="vehicle_color" name="vehicle_color" type="text" placeholder="white" class="required form-control">
                                     <label for="vehicle_model">Vehicle Model *</label>
-                                    <input id="vehicle_model" name="vehicle_model" type="text" class="required form-control">
+                                    <input id="vehicle_model" name="vehicle_model" type="text" placeholder="e.g 2019" class="required form-control">
                                   
                                     <p>(*) Mandatory</p>
                                 </section>
@@ -121,12 +108,18 @@ $this->load->view('header');
                                     
                                     <p>(*) Mandatory</p>
                                 </section>
-                                <h3 >Additional Detail</h3>
-                                <section>
-                                    
-                                </section>
+                               
                                 <h3>Finish</h3>
                                 <section>
+                                    <div>
+                                    <span class="w3-wide w3-text-red">
+                                    <input type="hidden" id="user_name"  class="required form-control" name="user_name" value="<?= $id->first_name;?>">
+                                    <input type="hidden" id="user_id" name="user_id" value="<?= $id->id;?>">
+                                        After Add vehicle information you must verified your vehicle with uploading complete your 
+                                        vehicle documents.
+                                    </span>
+                                    </div> <br>
+                                    
                                     <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">
                                     <label for="acceptTerms">I agree with the Terms and Conditions.</label>
                                 </section>
@@ -153,15 +146,24 @@ $this->load->view('header');
     <script src="<?=base_url();?>assets/libs/jquery-validation/dist/jquery.validate.min.js"></script>
 <script type="text/javascript">
    
- $('#zero_config').DataTable();
+ var dataTable = $('#zero_config').DataTable({   
+           "columnDefs":[  
+                {  
+                     "targets":[0, 3,8],  
+                     "orderable":false, 
+                },  
+           ],  
+      }
+ );
 
 
 
     $('#add_data').click(function() {
 /* Act on the event */
 
-$('#myModal').modal('show');
-
+            $('#myModal').modal('show');
+           
+            $('.modal-title').text('Add Vehicle Informatin');
 
 
     });
@@ -189,7 +191,31 @@ $('#myModal').modal('show');
             return form.valid();
         },
         onFinished: function(event, currentIndex) {
-            alert("Submitted!");
+
+            var form_data = form.serialize();
+            $.ajax({
+                    url: "<?php echo base_url() ?>transport/TransportController/store_vehicle_info",
+                    method:"post",
+                    data:form_data,
+                   //dataType:"json",
+                    success:function(data)
+                    {
+                        $('#myModal').modal('hide');
+                        $('#zero_config').DataTable().ajax.reload();
+                            // $('#form_output').html(data.success);
+                            // $('#student_form')[0].reset();
+                            // $('#action').val('Add');
+                            // $('.modal-title').text('Add Data');
+                            // $('#button_action').val('insert');
+                            // $('#student_table').DataTable().ajax.reload();
+
+                    
+                    }
+                });
+            // $('#myModal').modal('hide');
+           
+            // $('#zero_config').DataTable().ajax.reload();
+
         }
     });
 
