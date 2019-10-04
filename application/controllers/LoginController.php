@@ -35,8 +35,8 @@ class LoginController extends CI_Controller {
 		{
 			if($login_data)
 			{
-				$this->session->set_userdata('user_id',$login_data);
-				return redirect('LoginController/index',$login_data);
+				// $this->session->set_userdata('user_id',$login_data);
+				// return redirect('LoginController/index',$login_data);
 				
 			echo $role = $login_data->user_role;
 					if($role==Null)
@@ -118,7 +118,7 @@ class LoginController extends CI_Controller {
 			else
 			{
 				$this->session->set_flashdata('login_failed','Email or Password not matched');
-                        return redirect('LoginController/index');
+                        return redirect('login');
 			}
 
 

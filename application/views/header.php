@@ -261,7 +261,7 @@
                         <?php
                         if($user = $this->session->userdata('user_id')){
                         ?>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="mdi mdi-home-outline w3-text-green"></i><span class="hide-menu">Home</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo  base_url('Index_controller')?>" aria-expanded="false"><i class="mdi mdi-home-outline w3-text-green"></i><span class="hide-menu">Home</span></a></li>
                         <li class="sidebar-item"> 
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="
                            <?php

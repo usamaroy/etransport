@@ -13,13 +13,16 @@ class Index_controller extends CI_Controller {
 	 *	- or -
 	 * Since this controller is set as the default controller in
 	 * config/routes.php, it's displayed at http://example.com/
-	 *
+	 * 
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
 	{
+		$this->load->model('IndexModel');
+		$data = $this->IndexModel->index();
+				
 		$this->load->view('index_view');
 		
 	}

@@ -28,4 +28,12 @@ class CargoController extends CI_Controller {
 	{
 		$this->load->view('cargo/cargo_dashboard');
 	}
+
+	function __construct() {
+        parent::__construct();
+        if(!$this->session->userdata('user_id')){
+            redirect('login');
+		
+		}
+    }
 }

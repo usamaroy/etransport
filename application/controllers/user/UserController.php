@@ -27,4 +27,12 @@ class UserController extends CI_Controller {
 	public function user_dashboard(){
         $this->load->view('users/user_dashboard');
 	}
+
+	function __construct() {
+        parent::__construct();
+        if(!$this->session->userdata('user_id')){
+            redirect('login');
+		
+		}
+    }
 }

@@ -23,8 +23,10 @@ class TransportController extends CI_Controller {
 	
 	public function index()
 	{
+		$this->load->model('TransportModel');
+		$data =  $this->TransportModel->user_index();
 		
-		$this->load->view('transport/index_transport');
+		$this->load->view('transport/index_transport',['data' => $data]);
 		
 	}
 
@@ -45,4 +47,12 @@ class TransportController extends CI_Controller {
 		$this->load->model('TransportModel');
 		$response = $this->TransportModel->store_vehicle_info();
 	}
+
+	function __construct() {
+        parent::__construct();
+        if(!$this->session->userdata('user_id')){
+            redirect('login');
+		
+		}
+    }
 }

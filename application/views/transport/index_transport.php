@@ -1,74 +1,65 @@
 <?php
 $this->load->view('header');
 ?>
-<div style="max-width:1500px;margin-top: 140px">
-  
- <!-- Product grid -->
-  <div class="w3-row w3-grayscale">
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="/w3images/jeans1.jpg" style="width:100%">
-        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="/w3images/jeans2.jpg" style="width:100%">
-        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
-      </div>
-    </div>
+<div class="page-wrapper">
 
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="/w3images/jeans2.jpg" style="width:100%">
-          <span class="w3-tag w3-display-topleft">New</span>
-          <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-          </div>
+<div class="container-fluid">
+  <!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+<!-- First Photo Grid-->
+<?php foreach($data as $data):?>
+<div class="w3-row-padding w3-padding-16 w3-center" id="food">
+
+<div class="w3-card w3-col l4 s4">
+    
+    <div class="w3-container">
+    
+      <div class="w3-display-container">
+      <span class="w3-display-bottomleft">300 driving hours</span>
+          <img class="w3-display-topleft" src="<?=base_url('assets/img/verify.png');?>" style="width: 20%" alt="fd">
+          <img class="w3-display-topright" src="<?=base_url('assets/img/badge.png');?>" style="width: 20%" alt="fd">
+      <input type="hidden" class="prd_img" name="prd_img" id="prd_img" value="">
+        <img src="https://media.wired.com/photos/5d4df89db8d30b00081f6ebc/master/pass/security_defcon_tesla-1.jpg" style="width:100%;height:300px">
+        <span class="w3-tag w3-display-topleft"></span>
+        <div class="w3-display-middle w3-display-hover">
+          <button class="w3-button w3-black btn_cart" img=""  id="">Book Now <i class="fa fa-shopping-cart"></i></button>
         </div>
-        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
       </div>
-      <div class="w3-container">
-        <img src="/w3images/jeans3.jpg" style="width:100%">
-        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
-      </div>
+      <h5 class="w3-wide "><?=$data['vehicle_name'] . "  " . $data['vehicle_model']?></h5>
+      <p><br> Owner:  <b><?=$data['vehicle_owner']?> </b></p>
+      <h6 class="w3-opacity "><i class="fa fa-car w3-text-yellow" aria-hidden="true"></i> 300  hours</h6>
+      <p class="w3-wide w3-opacity "><i class="fa fa-road w3-text-green" aria-hidden="true"></i> 200 KM drivnig</p>
+      <p class="w3-wide">Color: <i class="w3-padding" style="background-color: <?=$data['vehicle_color'];?>">  <?=$data['vehicle_color'];?>   </i> </p>
+      <p class="w3-wide"> <i class="fa fa-location-arrow w3-text-yellow"> </i> Bookings 30</p>
+       
     </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="/w3images/jeans3.jpg" style="width:100%">
-        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="/w3images/jeans4.jpg" style="width:100%">
-          <span class="w3-tag w3-display-topleft">Sale</span>
-          <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-          </div>
-        </div>
-        <p>Vintage Skinny Jeans<br><b class="w3-text-red">$14.99</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="/w3images/jeans4.jpg" style="width:100%">
-        <p>Vintage Skinny Jeans<br><b>$14.99</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="/w3images/jeans1.jpg" style="width:100%">
-        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
-      </div>
-    </div>
+    
+    
   </div>
+<?php endforeach;?>
 
-  <!-- Subscribe section -->
-  <div class="w3-container w3-black w3-padding-32">
-    <h1>Subscribe</h1>
-    <p>To get special offers and VIP treatment:</p>
-    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+ 
+</div>
+
+
+
+<!-- Pagination -->
+<div class="w3-center w3-padding-32">
+  <div class="w3-bar">
+    <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+    <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
   </div>
+</div>
+
+<hr id="about">
+
+</div>
+</div>
 </div>
 
 <?php

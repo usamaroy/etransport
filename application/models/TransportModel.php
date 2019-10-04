@@ -69,6 +69,17 @@ class TransportModel extends CI_Model {
    
     }
 
+
+    public function user_index()
+    {
+        $data=$this->db
+        ->select('*')
+        ->from('transport_detail')
+        ->where('status','active')
+        ->get('');
+        return $data->result_array();
+    }
+
 }
 
 ?>
